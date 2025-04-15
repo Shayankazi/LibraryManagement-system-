@@ -18,19 +18,33 @@ const AddBook = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // In a real app, this would send data to an API
-    console.log('Form submitted:', formData);
-    alert('Book added successfully!');
-    setFormData({
-      title: '',
-      author: '',
-      price: '',
-      genre: '',
-      description: '',
-      coverImage: '',
-    });
+    setLoading(true);
+    setError('');
+    setSuccess('');
+    try {
+      // TODO: Replace with real token from context/auth
+      const token = localStorage.getItem('token');
+      await import('../api').then(api => api.addBook(formData, token));
+      setSuccess('Book added successfully!');
+      setFormData({
+        title: '',
+        author: '',
+        price: '',
+        genre: '',
+        description: '',
+        coverImage: '',
+      });
+    } catch (err) {
+      setError('Failed to add book');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

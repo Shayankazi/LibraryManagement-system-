@@ -5,6 +5,11 @@ import BrowseBooks from './pages/BrowseBooks';
 import AddBook from './pages/AddBook';
 import Cart from './pages/Cart';
 import Orders from './pages/Orders';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import PrivateRoute from './components/PrivateRoute';
+import Dashboard from './pages/Dashboard';
+import DonateBook from './pages/DonateBook';
 
 const App = () => {
   return (
@@ -15,9 +20,29 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/browse" element={<BrowseBooks />} />
-            <Route path="/add" element={<AddBook />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/orders" element={<Orders />} />
+            <Route path="/dashboard" element={
+              <PrivateRoute>
+                <Dashboard />
+              </PrivateRoute>
+            } />
+            <Route path="/add" element={
+              <PrivateRoute roles={["admin"]}>
+                <AddBook />
+              </PrivateRoute>
+            } />
+            <Route path="/donate" element={<DonateBook />} />
+            <Route path="/cart" element={
+              <PrivateRoute>
+                <Cart />
+              </PrivateRoute>
+            } />
+            <Route path="/orders" element={
+              <PrivateRoute>
+                <Orders />
+              </PrivateRoute>
+            } />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
           </Routes>
         </div>
       </div>

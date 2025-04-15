@@ -26,10 +26,10 @@ const Home = () => {
                 </div>
                 <div className="mt-3 sm:mt-0 sm:ml-3">
                   <Link
-                    to="/add"
+                    to="/donate"
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg md:px-10"
                   >
-                    Sell a Book
+                    Donate a Book
                   </Link>
                 </div>
               </div>
