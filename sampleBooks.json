@@ -1,0 +1,943 @@
+[
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "genre": "Classic",
+    "description": "A novel about the serious issues of rape and racial inequality.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8225261-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "genre": "Dystopian",
+    "description": "A story about government surveillance and totalitarianism.",
+    "coverImage": "https://covers.openlibrary.org/b/id/7222246-L.jpg",
+    "rent": 0.30
+  },
+
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "genre": "Romance",
+    "description": "A romantic novel of manners.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8091016-L.jpg",
+    "rent": 0.25
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "genre": "Classic",
+    "description": "A story about adolescent alienation and loss of innocence.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231856-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "description": "A fantasy novel and prelude to the Lord of the Rings.",
+    "coverImage": "https://covers.openlibrary.org/b/id/6979861-L.jpg",
+    "rent": 0.40
+  },
+  {
+    "title": "Fahrenheit 451",
+    "author": "Ray Bradbury",
+    "genre": "Dystopian",
+    "description": "A novel about a future American society where books are outlawed.",
+    "coverImage": "https://covers.openlibrary.org/b/id/11153223-L.jpg",
+    "rent": 0.15
+  },
+  {
+    "title": "Jane Eyre",
+    "author": "Charlotte Brontë",
+    "genre": "Classic",
+    "description": "A novel about the emotions and experiences of its eponymous heroine.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8228781-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "genre": "Dystopian",
+    "description": "A novel anticipating developments in reproductive technology.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8775112-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Moby-Dick",
+    "author": "Herman Melville",
+    "genre": "Adventure",
+    "description": "A sailor's narrative of the obsessive quest for Moby Dick.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8100936-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "War and Peace",
+    "author": "Leo Tolstoy",
+    "genre": "Historical",
+    "description": "A novel that chronicles the French invasion of Russia.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231994-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoevsky",
+    "genre": "Philosophical",
+    "description": "A novel focusing on the mental anguish of its protagonist.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8235116-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Odyssey",
+    "author": "Homer",
+    "genre": "Epic",
+    "description": "An epic poem about the journey of Odysseus.",
+    "coverImage": "https://covers.openlibrary.org/b/id/10591186-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Wuthering Heights",
+    "author": "Emily Brontë",
+    "genre": "Classic",
+    "description": "A story of love and revenge.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8228691-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "description": "An epic high-fantasy novel.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231852-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Great Expectations",
+    "author": "Charles Dickens",
+    "genre": "Classic",
+    "description": "A coming-of-age novel.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231997-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Grapes of Wrath",
+    "author": "John Steinbeck",
+    "genre": "Classic",
+    "description": "A story of a family during the Great Depression.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8228782-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Anna Karenina",
+    "author": "Leo Tolstoy",
+    "genre": "Classic",
+    "description": "A tragic story of love and betrayal.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231996-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Don Quixote",
+    "author": "Miguel de Cervantes",
+    "genre": "Adventure",
+    "description": "A novel about the adventures of a nobleman.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231849-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Brothers Karamazov",
+    "author": "Fyodor Dostoevsky",
+    "genre": "Philosophical",
+    "description": "A passionate philosophical novel.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231848-L.jpg",
+    "rent": 0.40
+  },
+  {
+    "title": "Dracula",
+    "author": "Bram Stoker",
+    "genre": "Horror",
+    "description": "The classic vampire novel that started it all.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231998-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Frankenstein",
+    "author": "Mary Shelley",
+    "genre": "Horror",
+    "description": "A story of a scientist and his monstrous creation.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231987-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "A Tale of Two Cities",
+    "author": "Charles Dickens",
+    "genre": "Historical",
+    "description": "A novel set in London and Paris before and during the French Revolution.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231991-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Les Misérables",
+    "author": "Victor Hugo",
+    "genre": "Historical",
+    "description": "A sweeping story of love, justice, and redemption in 19th-century France.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231992-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Madame Bovary",
+    "author": "Gustave Flaubert",
+    "genre": "Classic",
+    "description": "A novel about the romantic illusions of a doctor's wife.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231993-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "David Copperfield",
+    "author": "Charles Dickens",
+    "genre": "Classic",
+    "description": "A coming-of-age story about an orphan's journey.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231995-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Picture of Dorian Gray",
+    "author": "Oscar Wilde",
+    "genre": "Philosophical",
+    "description": "A novel about vanity, youth, and moral duplicity.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231999-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Divine Comedy",
+    "author": "Dante Alighieri",
+    "genre": "Epic",
+    "description": "An epic poem describing the journey through Hell, Purgatory, and Paradise.",
+    "coverImage": "https://covers.openlibrary.org/b/id/10591187-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Lolita",
+    "author": "Vladimir Nabokov",
+    "genre": "Classic",
+    "description": "A controversial novel about obsession and manipulation.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232000-L.jpg",
+    "rent": 0.40
+  },
+  {
+    "title": "Catch-22",
+    "author": "Joseph Heller",
+    "genre": "Satire",
+    "description": "A satirical novel about World War II.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232001-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Slaughterhouse-Five",
+    "author": "Kurt Vonnegut",
+    "genre": "Science Fiction",
+    "description": "A novel about the bombing of Dresden in World War II.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232002-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Sun Also Rises",
+    "author": "Ernest Hemingway",
+    "genre": "Classic",
+    "description": "A story of American and British expatriates in 1920s Europe.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232003-L.jpg",
+    "rent": 0.30
+  },
+  {
+    "title": "Gone with the Wind",
+    "author": "Margaret Mitchell",
+    "genre": "Historical",
+    "description": "A romantic drama set during the American Civil War.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232004-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Old Man and the Sea",
+    "author": "Ernest Hemingway",
+    "genre": "Classic",
+    "description": "A story about an epic struggle between an old fisherman and a giant marlin.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232005-L.jpg",
+    "rent": 0.25
+  },
+  {
+    "title": "A Farewell to Arms",
+    "author": "Ernest Hemingway",
+    "genre": "Classic",
+    "description": "A novel about love and war in Italy during World War I.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232006-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Sound and the Fury",
+    "author": "William Faulkner",
+    "genre": "Classic",
+    "description": "A story about the decline of a Southern family.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232007-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Stranger",
+    "author": "Albert Camus",
+    "genre": "Philosophical",
+    "description": "A novel about absurdism and existentialism.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232008-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Rebecca",
+    "author": "Daphne du Maurier",
+    "genre": "Gothic",
+    "description": "A gothic novel about love and jealousy.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232009-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Scarlet Letter",
+    "author": "Nathaniel Hawthorne",
+    "genre": "Classic",
+    "description": "A story about sin and redemption in Puritan Massachusetts.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232010-L.jpg",
+    "rent": 0.25
+  },
+  {
+    "title": "Middlemarch",
+    "author": "George Eliot",
+    "genre": "Classic",
+    "description": "A novel about the lives of residents in a fictional English town.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232011-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Count of Monte Cristo",
+    "author": "Alexandre Dumas",
+    "genre": "Adventure",
+    "description": "A story of betrayal, revenge, and redemption.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232012-L.jpg",
+    "rent": 0.40
+  },
+  {
+    "title": "Persuasion",
+    "author": "Jane Austen",
+    "genre": "Romance",
+    "description": "A story of love lost and regained.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232013-L.jpg",
+    "rent": 0.30
+  },
+  {
+    "title": "Emma",
+    "author": "Jane Austen",
+    "genre": "Romance",
+    "description": "A novel about youthful hubris and romantic misunderstandings.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232014-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Sense and Sensibility",
+    "author": "Jane Austen",
+    "genre": "Romance",
+    "description": "A story about the Dashwood sisters.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232015-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Oliver Twist",
+    "author": "Charles Dickens",
+    "genre": "Classic",
+    "description": "A story about an orphan boy in London.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232016-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Mansfield Park",
+    "author": "Jane Austen",
+    "genre": "Romance",
+    "description": "A novel about the life of Fanny Price.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232017-L.jpg",
+    "rent": 0.30
+  },
+  {
+    "title": "Treasure Island",
+    "author": "Robert Louis Stevenson",
+    "genre": "Adventure",
+    "description": "A tale of pirates and buried gold.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232018-L.jpg",
+    "rent": 0.25
+  },
+  {
+    "title": "The Jungle Book",
+    "author": "Rudyard Kipling",
+    "genre": "Adventure",
+    "description": "Stories about the adventures of Mowgli.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232019-L.jpg",
+    "rent": 0.15
+  },
+  {
+    "title": "Little Women",
+    "author": "Louisa May Alcott",
+    "genre": "Classic",
+    "description": "A novel about four sisters coming of age.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232020-L.jpg",
+    "rent": 0.30
+  },
+  {
+    "title": "A Christmas Carol",
+    "author": "Charles Dickens",
+    "genre": "Classic",
+    "description": "A novella about Ebenezer Scrooge's transformation.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232021-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Secret Garden",
+    "author": "Frances Hodgson Burnett",
+    "genre": "Children's",
+    "description": "A novel about the healing power of nature.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232022-L.jpg",
+    "rent": 0.15
+  },
+  {
+    "title": "Peter Pan",
+    "author": "J.M. Barrie",
+    "genre": "Children's",
+    "description": "A story about the boy who wouldn't grow up.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232023-L.jpg",
+    "rent": 0.25
+  },
+  {
+    "title": "Alice's Adventures in Wonderland",
+    "author": "Lewis Carroll",
+    "genre": "Children's",
+    "description": "A fantastical adventure in Wonderland.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232024-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Through the Looking-Glass",
+    "author": "Lewis Carroll",
+    "genre": "Children's",
+    "description": "A sequel to Alice's Adventures in Wonderland.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232025-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Wind in the Willows",
+    "author": "Kenneth Grahame",
+    "genre": "Children's",
+    "description": "A tale of friendship and adventure.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232026-L.jpg",
+    "rent": 0.25
+  },
+  {
+    "title": "Black Beauty",
+    "author": "Anna Sewell",
+    "genre": "Children's",
+    "description": "The autobiography of a horse.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232027-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Heidi",
+    "author": "Johanna Spyri",
+    "genre": "Children's",
+    "description": "A story about a young girl in the Swiss Alps.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232028-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Call of the Wild",
+    "author": "Jack London",
+    "genre": "Adventure",
+    "description": "A novel about the survival of a dog in the Yukon.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232029-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "White Fang",
+    "author": "Jack London",
+    "genre": "Adventure",
+    "description": "A companion novel to The Call of the Wild.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232030-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Journey to the Center of the Earth",
+    "author": "Jules Verne",
+    "genre": "Science Fiction",
+    "description": "A science fiction adventure novel.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232031-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Twenty Thousand Leagues Under the Seas",
+    "author": "Jules Verne",
+    "genre": "Science Fiction",
+    "description": "A classic science fiction adventure.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232032-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Around the World in Eighty Days",
+    "author": "Jules Verne",
+    "genre": "Adventure",
+    "description": "A story about a wager to travel around the world in 80 days.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232033-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Time Machine",
+    "author": "H.G. Wells",
+    "genre": "Science Fiction",
+    "description": "A novel about time travel.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232034-L.jpg",
+    "rent": 0.30
+  },
+  {
+    "title": "The War of the Worlds",
+    "author": "H.G. Wells",
+    "genre": "Science Fiction",
+    "description": "A novel about Martian invasion of Earth.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232035-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Invisible Man",
+    "author": "H.G. Wells",
+    "genre": "Science Fiction",
+    "description": "A story about a scientist who becomes invisible.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232036-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Dr. Jekyll and Mr. Hyde",
+    "author": "Robert Louis Stevenson",
+    "genre": "Horror",
+    "description": "A novel about the duality of human nature.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232037-L.jpg",
+    "rent": 0.30
+  },
+  {
+    "title": "The Hound of the Baskervilles",
+    "author": "Arthur Conan Doyle",
+    "genre": "Mystery",
+    "description": "A Sherlock Holmes mystery novel.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232038-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Adventures of Sherlock Holmes",
+    "author": "Arthur Conan Doyle",
+    "genre": "Mystery",
+    "description": "A collection of twelve short stories featuring Sherlock Holmes.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232039-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Memoirs of Sherlock Holmes",
+    "author": "Arthur Conan Doyle",
+    "genre": "Mystery",
+    "description": "A collection of Sherlock Holmes stories.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232040-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Return of Sherlock Holmes",
+    "author": "Arthur Conan Doyle",
+    "genre": "Mystery",
+    "description": "A collection of Sherlock Holmes stories.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232041-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Valley of Fear",
+    "author": "Arthur Conan Doyle",
+    "genre": "Mystery",
+    "description": "A Sherlock Holmes novel.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232042-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Secret Adversary",
+    "author": "Agatha Christie",
+    "genre": "Mystery",
+    "description": "A Tommy and Tuppence detective novel.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232043-L.jpg",
+    "rent": 0.30
+  },
+  {
+    "title": "Murder on the Orient Express",
+    "author": "Agatha Christie",
+    "genre": "Mystery",
+    "description": "A Hercule Poirot mystery novel.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232044-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Murder of Roger Ackroyd",
+    "author": "Agatha Christie",
+    "genre": "Mystery",
+    "description": "A Hercule Poirot mystery novel.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232045-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Death on the Nile",
+    "author": "Agatha Christie",
+    "genre": "Mystery",
+    "description": "A Hercule Poirot mystery novel.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232046-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "And Then There Were None",
+    "author": "Agatha Christie",
+    "genre": "Mystery",
+    "description": "A mystery novel about ten strangers on an island.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232047-L.jpg",
+    "rent": 0.40
+  },
+  {
+    "title": "The ABC Murders",
+    "author": "Agatha Christie",
+    "genre": "Mystery",
+    "description": "A Hercule Poirot mystery novel.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232048-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Mysterious Affair at Styles",
+    "author": "Agatha Christie",
+    "genre": "Mystery",
+    "description": "The first Hercule Poirot novel.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232049-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Little Prince",
+    "author": "Antoine de Saint-Exupéry",
+    "genre": "Children's",
+    "description": "A poetic tale of loneliness, friendship, and love.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232050-L.jpg",
+    "rent": 0.25
+  },
+  {
+    "title": "Charlotte's Web",
+    "author": "E.B. White",
+    "genre": "Children's",
+    "description": "A story about the friendship between a pig and a spider.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232051-L.jpg",
+    "rent": 0.15
+  },
+  {
+    "title": "Matilda",
+    "author": "Roald Dahl",
+    "genre": "Children's",
+    "description": "A story about a brilliant girl with extraordinary powers.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232052-L.jpg",
+    "rent": 0.25
+  },
+  {
+    "title": "Charlie and the Chocolate Factory",
+    "author": "Roald Dahl",
+    "genre": "Children's",
+    "description": "A story about a boy who wins a tour of a magical chocolate factory.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232053-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "James and the Giant Peach",
+    "author": "Roald Dahl",
+    "genre": "Children's",
+    "description": "A story about a boy's adventure inside a giant peach.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232054-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The BFG",
+    "author": "Roald Dahl",
+    "genre": "Children's",
+    "description": "A story about a Big Friendly Giant and a young girl.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232055-L.jpg",
+    "rent": 0.25
+  },
+  {
+    "title": "The Tale of Peter Rabbit",
+    "author": "Beatrix Potter",
+    "genre": "Children's",
+    "description": "A story about a mischievous rabbit.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232056-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Winnie-the-Pooh",
+    "author": "A.A. Milne",
+    "genre": "Children's",
+    "description": "A story about the adventures of Winnie-the-Pooh and friends.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232057-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Anne of Green Gables",
+    "author": "L.M. Montgomery",
+    "genre": "Classic",
+    "description": "A story about an imaginative orphan girl.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232058-L.jpg",
+    "rent": 0.30
+  },
+  {
+    "title": "The Wonderful Wizard of Oz",
+    "author": "L. Frank Baum",
+    "genre": "Children's",
+    "description": "A magical adventure in the Land of Oz.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232059-L.jpg",
+    "rent": 0.25
+  },
+  {
+    "title": "The Secret Life of Bees",
+    "author": "Sue Monk Kidd",
+    "genre": "Fiction",
+    "description": "A story about a young girl's search for the truth about her mother.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232060-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Life of Pi",
+    "author": "Yann Martel",
+    "genre": "Adventure",
+    "description": "A story about a boy stranded on a lifeboat with a tiger.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232061-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Kite Runner",
+    "author": "Khaled Hosseini",
+    "genre": "Drama",
+    "description": "A story about friendship and redemption in Afghanistan.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232062-L.jpg",
+    "rent": 0.40
+  },
+  {
+    "title": "Memoirs of a Geisha",
+    "author": "Arthur Golden",
+    "genre": "Historical",
+    "description": "A story about a geisha's life in Japan.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232063-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Book Thief",
+    "author": "Markus Zusak",
+    "genre": "Historical",
+    "description": "A novel set in Nazi Germany, narrated by Death.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232064-L.jpg",
+    "rent": 0.40
+  },
+  {
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "genre": "Adventure",
+    "description": "A story about following your dreams.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232065-L.jpg",
+    "rent": 0.35
+  }
+,
+  {
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "genre": "Educational",
+    "description": "An exploration of cosmology and the universe for general readers.",
+    "coverImage": "https://covers.openlibrary.org/b/id/240726-L.jpg",
+    "rent": 0.40
+  },
+  {
+    "title": "The Selfish Gene",
+    "author": "Richard Dawkins",
+    "genre": "Educational",
+    "description": "A groundbreaking work on evolution and natural selection.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8228691-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Long Walk to Freedom",
+    "author": "Nelson Mandela",
+    "genre": "Autobiography",
+    "description": "The autobiography of South African President Nelson Mandela.",
+    "coverImage": "https://covers.openlibrary.org/b/id/240727-L.jpg",
+    "rent": 15.49
+  },
+  {
+    "title": "Steve Jobs",
+    "author": "Walter Isaacson",
+    "genre": "Biography",
+    "description": "The authorized biography of Apple co-founder Steve Jobs.",
+    "coverImage": "https://covers.openlibrary.org/b/id/7222246-L.jpg",
+    "rent": 16.99
+  },
+  {
+    "title": "Educated",
+    "author": "Tara Westover",
+    "genre": "Memoir",
+    "description": "A memoir about a woman who grows up in a strict and abusive household in rural Idaho but eventually escapes to learn about the wider world through education.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8952216-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Becoming",
+    "author": "Michelle Obama",
+    "genre": "Autobiography",
+    "description": "The memoir of former First Lady Michelle Obama.",
+    "coverImage": "https://covers.openlibrary.org/b/id/9259253-L.jpg",
+    "rent": 0.40
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "genre": "Novel",
+    "description": "A novel about racial injustice in the Deep South.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8228692-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Diary of a Young Girl",
+    "author": "Anne Frank",
+    "genre": "Autobiography",
+    "description": "The diary of Anne Frank, a Jewish girl hiding during World War II.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8225631-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Thinking, Fast and Slow",
+    "author": "Daniel Kahneman",
+    "genre": "Educational",
+    "description": "A book about the two systems that drive the way we think.",
+    "coverImage": "https://covers.openlibrary.org/b/id/7278946-L.jpg",
+    "rent": 0.40
+  },
+  {
+    "title": "Sapiens: A Brief History of Humankind",
+    "author": "Yuval Noah Harari",
+    "genre": "Educational",
+    "description": "A book exploring the history and impact of Homo sapiens.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8167896-L.jpg",
+    "rent": 0.35
+  }
+,
+  {
+    "title": "Animal Farm",
+    "author": "George Orwell",
+    "genre": "Satire",
+    "description": "A political satire in the form of an allegorical novella about a group of farm animals who rebel against their human farmer.",
+    "coverImage": "https://covers.openlibrary.org/b/id/10591188-L.jpg",
+    "rent": 0.30
+  },
+  {
+    "title": "The Iliad",
+    "author": "Homer",
+    "genre": "Epic",
+    "description": "An ancient Greek epic poem recounting significant events during the final weeks of the Trojan War.",
+    "coverImage": "https://covers.openlibrary.org/b/id/10591189-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Death of a Salesman",
+    "author": "Arthur Miller",
+    "genre": "Drama",
+    "description": "A classic American play about the struggles of a traveling salesman and his family.",
+    "coverImage": "https://covers.openlibrary.org/b/id/10591190-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Wuthering Heights",
+    "author": "Emily Brontë",
+    "genre": "Gothic",
+    "description": "A tale of passion and revenge set on the Yorkshire moors.",
+    "coverImage": "https://covers.openlibrary.org/b/id/10591191-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Immortal Life of Henrietta Lacks",
+    "author": "Rebecca Skloot",
+    "genre": "Non-Fiction",
+    "description": "The story of Henrietta Lacks and the immortal cell line, HeLa, that came from her cancer cells.",
+    "coverImage": "https://covers.openlibrary.org/b/id/10591192-L.jpg",
+    "rent": 0.40
+  }
+,
+  {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "description": "A fantasy novel about Bilbo Baggins' adventure to win a share of treasure guarded by Smaug the dragon.",
+    "coverImage": "https://covers.openlibrary.org/b/id/6979861-L.jpg",
+    "rent": 0.40
+  },
+  {
+    "title": "Sherlock Holmes: The Sign of Four",
+    "author": "Arthur Conan Doyle",
+    "genre": "Mystery",
+    "description": "A classic Sherlock Holmes mystery involving a secret pact and a hidden treasure.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8232040-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Jane Eyre",
+    "author": "Charlotte Brontë",
+    "genre": "Romance",
+    "description": "A romance novel about the emotions and experiences of the title character, including her love for Mr. Rochester.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8228693-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "The Adventures of Tom Sawyer",
+    "author": "Mark Twain",
+    "genre": "Adventure",
+    "description": "A novel about a young boy growing up along the Mississippi River.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8228694-L.jpg",
+    "rent": 0.30
+  },
+  {
+    "title": "Goodnight Moon",
+    "author": "Margaret Wise Brown",
+    "genre": "Children's",
+    "description": "A beloved children's bedtime story.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8228695-L.jpg",
+    "rent": 0.15
+  },
+  {
+    "title": "Team of Rivals",
+    "author": "Doris Kearns Goodwin",
+    "genre": "Biography",
+    "description": "The political genius of Abraham Lincoln.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8228696-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "I Am Malala",
+    "author": "Malala Yousafzai",
+    "genre": "Memoir",
+    "description": "The memoir of the youngest Nobel Prize laureate.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8228697-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Norwegian Wood",
+    "author": "Haruki Murakami",
+    "genre": "Novel",
+    "description": "A coming-of-age story set in 1960s Tokyo.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8228698-L.jpg",
+    "rent": 0.35
+  },
+  {
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "genre": "Fiction",
+    "description": "A dystopian novel set in a futuristic World State.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8228699-L.jpg",
+    "rent": 0.35
+  }
+]
+
