@@ -33,6 +33,12 @@ export async function addBook(book) {
   });
 }
 
+export async function deleteBook(bookId) {
+  return fetchWithAuth(`${API_BASE}/books/${bookId}`, {
+    method: 'DELETE'
+  });
+}
+
 export async function fetchTransactions() {
   return fetchWithAuth(`${API_BASE}/transactions`);
 }
@@ -73,4 +79,8 @@ export async function returnBook(bookId) {
   return fetchWithAuth(`${API_BASE}/transactions/return/${bookId}`, {
     method: 'POST'
   });
+}
+
+export async function fetchBookById(bookId) {
+  return fetchWithAuth(`${API_BASE}/books/${bookId}`);
 }

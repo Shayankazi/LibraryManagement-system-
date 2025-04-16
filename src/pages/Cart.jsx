@@ -1,17 +1,18 @@
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { TrashIcon } from '@heroicons/react/24/outline';
 
 const Cart = () => {
   const { cart, removeFromCart, clearCart } = useCart();
-  const { token } = useAuth();
+  const { user, token } = useAuth();
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState('');
   const [error, setError] = useState('');
   const [paymentMethod, setPaymentMethod] = useState('card');
   const [orderId, setOrderId] = useState(null);
   const [orderDetails, setOrderDetails] = useState(null);
+  const [downloadError, setDownloadError] = useState('');
 
   const total = cart.reduce((sum, item) => sum + (item.totalRent || 0), 0);
 
@@ -48,40 +49,100 @@ const Cart = () => {
     }
   };
 
-  const handleDownloadReceipt = () => {
-    // Allow receipt download as long as orderId exists
-    if (!orderId) return;
-    const userName = (orderDetails && orderDetails.user && (orderDetails.user.name || orderDetails.user.username)) || (user && (user.name || user.username)) || 'N/A';
-    const payment = paymentMethod.charAt(0).toUpperCase() + paymentMethod.slice(1);
-    const books = (orderDetails && orderDetails.results) ? orderDetails.results : cart;
-    const bookList = books.map((r, idx) => {
-      // Try to get book name from cart or orderDetails
-      const bookTitle = r.title || r.bookTitle || r.bookName || (cart.find(c => c.id === r.bookId)?.title) || r.bookId || 'N/A';
-      const dueDate = r.endDate || (cart.find(c => c.id === r.bookId)?.endDate) || 'N/A';
-      return `<li><strong>${bookTitle}</strong> | Due: ${dueDate} | Status: ${r.status || 'N/A'}</li>`;
-    }).join('');
-    const receiptHtml = `
-      <html>
-      <head><title>Order Receipt</title></head>
-      <body>
-        <h2>Order Receipt</h2>
-        <p><strong>Order ID:</strong> ${orderId}</p>
-        <p><strong>User:</strong> ${userName}</p>
-        <p><strong>Date:</strong> ${new Date().toLocaleString()}</p>
-        <p><strong>Payment Method:</strong> ${payment}</p>
-        <h3>Books:</h3>
-        <ul>
-          ${bookList}
-        </ul>
-        <p><strong>Total Amount:</strong> $${total.toFixed(2)}</p>
-      </body>
-      </html>
-    `;
-    const blob = new Blob([receiptHtml], { type: 'text/html' });
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = `OrderReceipt_${orderId}.html`;
-    link.click();
+  const handleDownloadReceipt = async () => {
+    setDownloadError('');
+    try {
+      if (!orderId) {
+        setDownloadError('No order found to generate receipt.');
+        return;
+      }
+      // User name
+      const userName = (orderDetails && orderDetails.user && (orderDetails.user.name || orderDetails.user.username)) || (user && (user.name || user.username)) || 'N/A';
+      // Current date
+      const currentDate = new Date().toLocaleString();
+      // Payment method
+      const payment = paymentMethod.charAt(0).toUpperCase() + paymentMethod.slice(1);
+      // Books: fetch details if only bookId is present
+      let books = [];
+      if (orderDetails && Array.isArray(orderDetails.results) && orderDetails.results.length > 0) {
+        const apiModule = await import('../api');
+        books = await Promise.all(orderDetails.results.map(async (r) => {
+          if (r.bookId) {
+            try {
+              const book = await apiModule.fetchBookById(r.bookId);
+              return { ...book, ...r };
+            } catch (e) {
+              return { title: `Book ID ${r.bookId}`, ...r };
+            }
+          }
+          return r;
+        }));
+      } else if (orderDetails && Array.isArray(orderDetails.books) && orderDetails.books.length > 0) {
+        books = orderDetails.books;
+      } else if (Array.isArray(cart) && cart.length > 0) {
+        books = cart;
+      }
+      if (!books || books.length === 0) {
+        setDownloadError('No books found in your order.');
+        return;
+      }
+      // Compose book list rows with name and due date
+      const bookList = books.map((r, idx) => {
+        const bookTitle = r.title || r.bookTitle || r.bookName || r.bookId || 'N/A';
+        const dueDate = r.dueDate ? new Date(r.dueDate).toLocaleDateString() : (r.endDate || 'N/A');
+        return `<tr><td>${idx + 1}</td><td>${bookTitle}</td><td>${dueDate}</td><td>${r.status || 'N/A'}</td></tr>`;
+      }).join('');
+      // Total amount: sum totalRent from books/orderDetails.results/orderDetails
+      let totalAmount = 'N/A';
+      if (orderDetails && orderDetails.results && Array.isArray(orderDetails.results)) {
+        totalAmount = orderDetails.results.reduce((sum, r) => sum + (parseFloat(r.totalRent) || 0), 0).toFixed(2);
+      } else if (books && books.length > 0) {
+        totalAmount = books.reduce((sum, b) => sum + (parseFloat(b.totalRent) || 0), 0).toFixed(2);
+      } else if (orderDetails && typeof orderDetails.totalRent === 'number') {
+        totalAmount = orderDetails.totalRent.toFixed(2);
+      }
+      // HTML receipt
+      const receiptHtml = `
+        <html>
+        <head><title>Order Receipt</title>
+          <style>
+            body { font-family: Arial, sans-serif; margin: 30px; }
+            h2 { color: #256029; }
+            table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+            th, td { border: 1px solid #d3d3d3; padding: 8px; text-align: left; }
+            th { background: #e3fceb; }
+            .total { font-weight: bold; font-size: 1.1em; }
+          </style>
+        </head>
+        <body>
+          <h2>Order Receipt</h2>
+          <p><strong>Order ID:</strong> ${orderId}</p>
+          <p><strong>User:</strong> ${userName}</p>
+          <p><strong>Date:</strong> ${currentDate}</p>
+          <p><strong>Payment Method:</strong> ${payment}</p>
+          <table>
+            <thead>
+              <tr><th>#</th><th>Book Name</th><th>Due Date</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+              ${bookList}
+            </tbody>
+          </table>
+          <p class="total">Total Amount: $${totalAmount}</p>
+        </body>
+        </html>
+      `;
+      const blob = new Blob([receiptHtml], { type: 'text/html' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = `OrderReceipt_${orderId}.html`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (err) {
+      setDownloadError('Failed to generate or download receipt.');
+      console.error('Download Receipt Error:', err);
+    }
   };
 
 
@@ -94,6 +155,7 @@ const Cart = () => {
           <p className="text-lg mb-2">Thank you for your purchase.</p>
           <p className="mb-4">Your Order ID: <span className="font-mono bg-gray-100 px-2 py-1 rounded">{orderId}</span></p>
           <button onClick={handleDownloadReceipt} className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Download Receipt</button>
+          {downloadError && <div className="mt-4 text-red-600">{downloadError}</div>}
         </div>
       ) : cart.length === 0 ? (
         <p>Your cart is empty.</p>

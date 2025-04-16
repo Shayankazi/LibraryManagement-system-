@@ -70,6 +70,25 @@ const BookCard = ({ book: initialBook }) => {
     }
   };
 
+  const handleDelete = async () => {
+    if (!window.confirm(`Are you sure you want to delete "${book.title}"? This cannot be undone.`)) return;
+    setLoading(true);
+    setError('');
+    setSuccess('');
+    try {
+      await import('../api').then(api => api.deleteBook(book.id));
+      setSuccess('Book deleted successfully!');
+      // Optionally, trigger a refresh or callback to parent to remove this book from the list
+      if (typeof window !== 'undefined') {
+        window.location.reload(); // Simple approach for now
+      }
+    } catch (err) {
+      setError(err.message || 'Failed to delete book');
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const handleCardClick = () => {
     if (!user) {
       setError('Please login to rent books');
@@ -133,6 +152,18 @@ const BookCard = ({ book: initialBook }) => {
               disabled={!book.available}
             >
               {book.available ? 'Rent' : 'Not Available'}
+            </button>
+          )}
+          {user?.role === 'admin' && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleDelete();
+              }}
+              className="mt-4 w-full py-2 px-4 rounded-lg text-white bg-red-600 hover:bg-red-700 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+              disabled={loading}
+            >
+              {loading ? 'Deleting...' : 'Delete Book'}
             </button>
           )}
         </div>

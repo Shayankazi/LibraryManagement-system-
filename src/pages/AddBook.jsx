@@ -4,7 +4,7 @@ const AddBook = () => {
   const [formData, setFormData] = useState({
     title: '',
     author: '',
-    price: '',
+    rent: '',
     genre: '',
     description: '',
     coverImage: '',
@@ -28,20 +28,28 @@ const AddBook = () => {
     setError('');
     setSuccess('');
     try {
-      // TODO: Replace with real token from context/auth
-      const token = localStorage.getItem('token');
-      await import('../api').then(api => api.addBook(formData, token));
+      // Only send fields required by the backend
+      const { title, author, rent, genre, description, coverImage } = formData;
+      const bookData = {
+        title,
+        author,
+        rent: parseFloat(rent),
+        genre,
+        description,
+        coverImage
+      };
+      await import('../api').then(api => api.addBook(bookData));
       setSuccess('Book added successfully!');
       setFormData({
         title: '',
         author: '',
-        price: '',
+        rent: '',
         genre: '',
         description: '',
         coverImage: '',
       });
     } catch (err) {
-      setError('Failed to add book');
+      setError(err.message || 'Failed to add book');
     } finally {
       setLoading(false);
     }
@@ -49,6 +57,17 @@ const AddBook = () => {
 
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      {success && (
+        <div className="flex items-center justify-center mb-6 p-4 bg-green-100 border border-green-300 rounded">
+          <svg className="w-8 h-8 text-green-600 mr-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+          <div>
+            <div className="text-green-700 font-semibold">{success}</div>
+            <div className="text-green-700">Thank you for adding a new book!</div>
+          </div>
+        </div>
+      )}
       <div className="md:grid md:grid-cols-3 md:gap-6">
         <div className="md:col-span-1">
           <div className="px-4 sm:px-0">
@@ -95,20 +114,20 @@ const AddBook = () => {
                   />
                 </div>
 
-                {/* Price */}
+                {/* Rent */}
                 <div>
-                  <label htmlFor="price" className="block text-sm font-medium text-gray-700">
-                    Price ($)
+                  <label htmlFor="rent" className="block text-sm font-medium text-gray-700">
+                    Rent ($/day)
                   </label>
                   <input
                     type="number"
-                    name="price"
-                    id="price"
+                    name="rent"
+                    id="rent"
                     required
                     min="0"
                     step="0.01"
                     className="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                    value={formData.price}
+                    value={formData.rent}
                     onChange={handleChange}
                   />
                 </div>
